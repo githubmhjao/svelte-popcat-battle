@@ -5,8 +5,8 @@
   import Card from './Card.svelte';
   import Progress from './Progress.svelte';
 
-  const closeMouthSrc = './images/popcatCloseMouth.png';
-  const openMouthSrc = './images/popcatOpenMouth.png';
+  import popcatOpenMouth from './assets/popcatOpenMouth.png';
+  import popcatCloseMouth from './assets/popcatCloseMouth.png';
 
   let closeMouthState = true;
   const statisticState = { 'count': 0, 'apm': 0, 'apm max': 0 };
@@ -56,9 +56,9 @@
   <div class="images">
     <div class='countdown'>{countdown}</div>
     {#if closeMouthState}
-      <img src={closeMouthSrc} alt='popcat close mouth'/>
+      <img src={popcatCloseMouth} alt='popcat close mouth'/>
     {:else}
-      <img src={openMouthSrc} alt='popcat open mouth'/>
+      <img src={popcatOpenMouth} alt='popcat open mouth'/>
     {/if}      
   </div>
   <div class='progress'>
